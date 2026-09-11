@@ -4,7 +4,7 @@ import Image from "next/image";
 import { asset } from "@/lib/asset";
 import type { ProductsData } from "@/types";
 import { won } from "@/lib/format";
-import { useFunnel } from "../FunnelContext";
+import Link from "next/link";
 import { Countdown } from "../Countdown";
 import { Badge, CarrierChip } from "../ui/Badge";
 import { Button } from "../ui/Button";
@@ -12,7 +12,6 @@ import { IconCheck, IconClock } from "../ui/Icons";
 import { SectionTitle } from "../ui/SectionTitle";
 
 export function Preorder({ data }: { data: ProductsData["preorder"] }) {
-  const { open } = useFunnel();
   return (
     <section id="hot" className="border-t border-line/60 bg-bg-2/40 py-14 sm:py-20">
       <div className="container-x">
@@ -80,12 +79,9 @@ export function Preorder({ data }: { data: ProductsData["preorder"] }) {
                   ))}
                 </ul>
 
-                <Button
-                  className="mt-5 w-full"
-                  onClick={() => open({ productId: p.id, model: `${p.name} ${p.storage}`, carrier: p.carrier })}
-                >
-                  사전예약 조건 조회하기
-                </Button>
+                <Link href={`/p/${p.id}`} className="mt-5 block">
+                  <Button className="w-full" tabIndex={-1}>사전예약 조건 조회하기</Button>
+                </Link>
               </article>
             );
           })}

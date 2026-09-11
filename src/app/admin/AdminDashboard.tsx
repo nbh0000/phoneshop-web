@@ -96,7 +96,7 @@ export function AdminDashboard() {
                   <td className="px-4 py-3 font-bold">{r.nameMasked}</td>
                   <td className="tabular px-4 py-3"><a href={`tel:${r.phone}`} className="hover:text-accent">{r.phone.replace(/(\d{3})(\d{3,4})(\d{4})/, "$1-$2-$3")}</a></td>
                   <td className="px-4 py-3">{r.carrier}</td>
-                  <td className="px-4 py-3 text-fg-2">{r.model || "-"}</td>
+                  <td className="px-4 py-3 text-fg-2">{r.model || "-"}{r.memo && <span className="mt-0.5 block max-w-xs text-xs text-fg-3">{r.memo}</span>}</td>
                   <td className="px-4 py-3"><span className={cn("rounded-md px-2 py-0.5 text-xs font-bold", s.cls)}>{s.text}</span></td>
                 </tr>
               );

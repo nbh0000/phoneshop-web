@@ -3,10 +3,25 @@ import reviewsJson from "../../data/reviews.json";
 import companyJson from "../../data/company.json";
 import faqJson from "../../data/faq.json";
 import bannersJson from "../../data/banners.json";
-import type { BannerSlide, Company, Faq, ProductsData, Review } from "@/types";
+import plansJson from "../../data/plans.json";
+import type { BannerSlide, Company, Faq, PlansData, Product, ProductsData, Review } from "@/types";
 
 export function getProductsData(): ProductsData {
   return productsJson as unknown as ProductsData;
+}
+
+export function getPlans(): PlansData {
+  return plansJson as unknown as PlansData;
+}
+
+/** 특가 상품 + 사전예약 상품을 id 로 조회 */
+export function getAllProducts(): Product[] {
+  const { products, preorder } = getProductsData();
+  const pre = preorder.items.map((p) => ({ ...p, discounts: { official: 0, extra: 0 } })) as Product[];
+  return [...products, ...pre];
+}
+export function getProductById(id: string): Product | undefined {
+  return getAllProducts().find((p) => p.id === id);
 }
 
 export function getReviews(): { reviews: Review[]; isSample: boolean } {

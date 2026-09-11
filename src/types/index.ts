@@ -3,8 +3,16 @@ export type Carrier = "SKT" | "KT" | "LGU+";
 export type JoinType = "번호이동" | "기기변경" | "신규가입";
 export type DiscountType = "공시지원" | "선택약정";
 
+export interface ProductPricing {
+  storages: { label: string; releasePrice: number }[];
+  colors: { name: string; hex: string }[];
+  /** 통신사별 지원금 (최고 요금제·번호이동 기준) */
+  support: Record<Carrier, { official: number; extra: number }>;
+}
+
 export interface Product {
   id: string;
+  pricing?: ProductPricing;
   name: string;
   storage: string;
   category: Category;
@@ -85,7 +93,29 @@ export interface Inquiry {
 export interface FunnelPreset {
   productId?: string;
   model?: string;
-  carrier?: Carrier;
+  carrier?: Carrier | "알뜰폰";
+  /** 상세 페이지에서 선택한 조건 요약 (관리자 메모로 저장) */
+  memo?: string;
+}
+
+export interface Plan {
+  name: string;
+  monthly: number;
+  desc: string;
+  supportRate: number;
+}
+export interface PartnerCard {
+  name: string;
+  monthlyDiscount: number;
+  condition: string;
+}
+export interface PlansData {
+  installmentRate: number;
+  selectContractRate: number;
+  joinTypes: JoinType[];
+  extraByJoinType: Record<string, number>;
+  carriers: Record<Carrier, { plans: Plan[] }>;
+  cards: PartnerCard[];
 }
 
 export interface BannerBenefit {

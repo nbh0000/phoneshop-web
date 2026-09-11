@@ -5,7 +5,7 @@ import Image from "next/image";
 import { asset } from "@/lib/asset";
 import type { Category, Product } from "@/types";
 import { won } from "@/lib/format";
-import { useFunnel } from "../FunnelContext";
+import { useRouter } from "next/navigation";
 import { Badge, CarrierChip } from "../ui/Badge";
 import { cn } from "../ui/Button";
 import { IconArrow } from "../ui/Icons";
@@ -89,7 +89,7 @@ function ProductCard({ p, onClick }: { p: Product; onClick: () => void }) {
       </dl>
 
       <span className="mt-4 inline-flex items-center justify-center gap-1 rounded-xl border border-line-2 py-2.5 text-sm font-bold text-fg transition group-hover:border-accent group-hover:bg-accent group-hover:text-white">
-        이 조건으로 조회하기
+        조건 조회하기
         <IconArrow width={16} height={16} />
       </span>
     </article>
@@ -98,7 +98,7 @@ function ProductCard({ p, onClick }: { p: Product; onClick: () => void }) {
 
 export function Products({ products }: { products: Product[] }) {
   const [tab, setTab] = useState<Tab>("all");
-  const { open } = useFunnel();
+  const router = useRouter();
 
   // 헤더의 #iphone / #galaxy 링크로 탭 전환
   useEffect(() => {
@@ -121,7 +121,7 @@ export function Products({ products }: { products: Product[] }) {
         <SectionTitle
           eyebrow="Live deals"
           title="실시간 특가 상품"
-          desc="카드를 누르면 해당 조건이 담긴 채로 조회 신청이 열립니다."
+          desc="카드를 누르면 통신사·요금제·할부 조건을 직접 선택해 월 납부금액을 확인할 수 있습니다."
         />
 
         <div className="mt-6 flex gap-2" role="tablist" aria-label="상품 분류">
@@ -146,7 +146,7 @@ export function Products({ products }: { products: Product[] }) {
             <ProductCard
               key={p.id}
               p={p}
-              onClick={() => open({ productId: p.id, model: `${p.name} ${p.storage}`, carrier: p.carrier })}
+              onClick={() => router.push(`/p/${p.id}`)}
             />
           ))}
         </div>

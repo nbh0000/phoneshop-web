@@ -112,7 +112,7 @@ export function FunnelModal({ preset, onClose }: { preset: FunnelPreset; onClose
       const r = await fetch("/api/inquiry", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, phone: form.phone.replace(/\D/g, ""), productId: preset.productId }),
+        body: JSON.stringify({ ...form, phone: form.phone.replace(/\D/g, ""), productId: preset.productId, memo: preset.memo }),
       });
       const j = await r.json();
       if (!r.ok) throw new Error(j.error || "요청에 실패했습니다.");
@@ -163,6 +163,7 @@ export function FunnelModal({ preset, onClose }: { preset: FunnelPreset; onClose
                 <div className="rounded-xl border border-accent/30 bg-accent/10 px-3 py-2 text-sm">
                   <span className="text-fg-2">선택 상품 </span>
                   <span className="font-bold text-accent">{preset.model}</span>
+                  {preset.memo && <p className="mt-1 text-xs leading-relaxed text-fg-2">{preset.memo}</p>}
                 </div>
               )}
               <Field label="이름" required>

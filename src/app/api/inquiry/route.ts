@@ -26,6 +26,7 @@ export async function POST(req: Request) {
   const carrier = String(body.carrier || "");
   const model = String(body.model || "").trim().slice(0, 60);
   const productId = body.productId ? String(body.productId).slice(0, 60) : undefined;
+  const memo = body.memo ? String(body.memo).slice(0, 300) : undefined;
   const agreed = body.agreed === true;
 
   if (!agreed) return NextResponse.json({ error: "개인정보 수집·이용에 동의해 주세요." }, { status: 400 });
@@ -56,6 +57,7 @@ export async function POST(req: Request) {
     productId,
     authStatus: "pending",
     authTxId: txId,
+    memo,
   };
 
   try {

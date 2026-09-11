@@ -1,5 +1,5 @@
 {
-  "_comment": "상품 데이터. 코드 수정 없이 이 파일만 바꾸면 사이트가 갱신됩니다. price 단위는 원(KRW). category: galaxy | iphone. carrier: SKT | KT | LGU+. joinType: 번호이동 | 기기변경 | 신규가입. discountType: 공시지원 | 선택약정 image: public/images/products/ 경로 (삼성/애플 공식 사이트 제품 이미지).",
+  "_comment": "상품 데이터. 코드 수정 없이 이 파일만 바꾸면 사이트가 갱신됩니다. price 단위는 원(KRW). category: galaxy | iphone. carrier: SKT | KT | LGU+. joinType: 번호이동 | 기기변경 | 신규가입. discountType: 공시지원 | 선택약정 image: public/images/products/ 경로 (삼성/애플 공식 사이트 제품 이미지). pricing: 상세 페이지 계산용 (storages/colors/통신사별 지원금). 요금제·제휴카드는 data/plans.json.",
   "preorder": {
     "deadline": "2026-09-30T23:59:59+09:00",
     "title": "사전예약 오픈",
@@ -21,7 +21,55 @@
           "케이스 + 강화유리 증정",
           "예약 고객 우선 출고"
         ],
-        "image": "/images/products/iphone-18-pro.png"
+        "image": "/images/products/iphone-18-pro.png",
+        "pricing": {
+          "storages": [
+            {
+              "label": "256GB",
+              "releasePrice": 1690000
+            },
+            {
+              "label": "512GB",
+              "releasePrice": 1820000
+            },
+            {
+              "label": "1TB",
+              "releasePrice": 2080000
+            }
+          ],
+          "colors": [
+            {
+              "name": "버건디",
+              "hex": "#5a1f2a"
+            },
+            {
+              "name": "글레이셔",
+              "hex": "#d9e4ea"
+            },
+            {
+              "name": "실버",
+              "hex": "#d4d4d6"
+            },
+            {
+              "name": "블랙",
+              "hex": "#1f1f21"
+            }
+          ],
+          "support": {
+            "SKT": {
+              "official": 400000,
+              "extra": 300000
+            },
+            "KT": {
+              "official": 400000,
+              "extra": 300000
+            },
+            "LGU+": {
+              "official": 360000,
+              "extra": 330000
+            }
+          }
+        }
       },
       {
         "id": "pre-fold8",
@@ -39,7 +87,47 @@
           "S펜 케이스 증정",
           "예약 고객 우선 출고"
         ],
-        "image": "/images/products/fold8.png"
+        "image": "/images/products/fold8.png",
+        "pricing": {
+          "storages": [
+            {
+              "label": "256GB",
+              "releasePrice": 2398000
+            },
+            {
+              "label": "512GB",
+              "releasePrice": 2528000
+            }
+          ],
+          "colors": [
+            {
+              "name": "라벤더",
+              "hex": "#c9bde0"
+            },
+            {
+              "name": "그라파이트",
+              "hex": "#3a3a3c"
+            },
+            {
+              "name": "크림",
+              "hex": "#efe7d6"
+            }
+          ],
+          "support": {
+            "SKT": {
+              "official": 400000,
+              "extra": 508000
+            },
+            "KT": {
+              "official": 380000,
+              "extra": 530000
+            },
+            "LGU+": {
+              "official": 360000,
+              "extra": 560000
+            }
+          }
+        }
       }
     ]
   },
@@ -60,7 +148,55 @@
         "official": 500000,
         "extra": 600000
       },
-      "image": "/images/products/s26-ultra.png"
+      "image": "/images/products/s26-ultra.png",
+      "pricing": {
+        "storages": [
+          {
+            "label": "256GB",
+            "releasePrice": 1698400
+          },
+          {
+            "label": "512GB",
+            "releasePrice": 1828400
+          },
+          {
+            "label": "1TB",
+            "releasePrice": 2088400
+          }
+        ],
+        "colors": [
+          {
+            "name": "코발트 바이올렛",
+            "hex": "#5b4b9e"
+          },
+          {
+            "name": "그라파이트",
+            "hex": "#3a3a3c"
+          },
+          {
+            "name": "화이트",
+            "hex": "#eceae6"
+          },
+          {
+            "name": "실버",
+            "hex": "#c9cccf"
+          }
+        ],
+        "support": {
+          "SKT": {
+            "official": 500000,
+            "extra": 600000
+          },
+          "KT": {
+            "official": 480000,
+            "extra": 630000
+          },
+          "LGU+": {
+            "official": 450000,
+            "extra": 660000
+          }
+        }
+      }
     },
     {
       "id": "s26-plus",
@@ -78,7 +214,47 @@
         "official": 450000,
         "extra": 550000
       },
-      "image": "/images/products/s26-plus.png"
+      "image": "/images/products/s26-plus.png",
+      "pricing": {
+        "storages": [
+          {
+            "label": "256GB",
+            "releasePrice": 1353000
+          },
+          {
+            "label": "512GB",
+            "releasePrice": 1483000
+          }
+        ],
+        "colors": [
+          {
+            "name": "코발트 바이올렛",
+            "hex": "#5b4b9e"
+          },
+          {
+            "name": "그라파이트",
+            "hex": "#3a3a3c"
+          },
+          {
+            "name": "아이스블루",
+            "hex": "#bcd4e6"
+          }
+        ],
+        "support": {
+          "SKT": {
+            "official": 450000,
+            "extra": 550000
+          },
+          "KT": {
+            "official": 450000,
+            "extra": 550000
+          },
+          "LGU+": {
+            "official": 400000,
+            "extra": 600000
+          }
+        }
+      }
     },
     {
       "id": "s26",
@@ -96,7 +272,51 @@
         "official": 400000,
         "extra": 600000
       },
-      "image": "/images/products/s26.png"
+      "image": "/images/products/s26.png",
+      "pricing": {
+        "storages": [
+          {
+            "label": "256GB",
+            "releasePrice": 1155000
+          },
+          {
+            "label": "512GB",
+            "releasePrice": 1285000
+          }
+        ],
+        "colors": [
+          {
+            "name": "코발트 바이올렛",
+            "hex": "#5b4b9e"
+          },
+          {
+            "name": "그라파이트",
+            "hex": "#3a3a3c"
+          },
+          {
+            "name": "아이스블루",
+            "hex": "#bcd4e6"
+          },
+          {
+            "name": "민트",
+            "hex": "#bfe3d0"
+          }
+        ],
+        "support": {
+          "SKT": {
+            "official": 400000,
+            "extra": 600000
+          },
+          "KT": {
+            "official": 380000,
+            "extra": 630000
+          },
+          "LGU+": {
+            "official": 400000,
+            "extra": 600000
+          }
+        }
+      }
     },
     {
       "id": "fold8-ultra",
@@ -114,6 +334,50 @@
       "discounts": {
         "official": 500000,
         "extra": 400000
+      },
+      "pricing": {
+        "storages": [
+          {
+            "label": "256GB",
+            "releasePrice": 2577300
+          },
+          {
+            "label": "512GB",
+            "releasePrice": 2707300
+          },
+          {
+            "label": "1TB",
+            "releasePrice": 2967300
+          }
+        ],
+        "colors": [
+          {
+            "name": "바이올렛 쉐도우",
+            "hex": "#4a3b66"
+          },
+          {
+            "name": "그라파이트",
+            "hex": "#3a3a3c"
+          },
+          {
+            "name": "크림",
+            "hex": "#efe7d6"
+          }
+        ],
+        "support": {
+          "SKT": {
+            "official": 500000,
+            "extra": 400000
+          },
+          "KT": {
+            "official": 500000,
+            "extra": 400000
+          },
+          "LGU+": {
+            "official": 450000,
+            "extra": 440000
+          }
+        }
       }
     },
     {
@@ -132,7 +396,51 @@
         "official": 500000,
         "extra": 600000
       },
-      "image": "/images/products/flip8.png"
+      "image": "/images/products/flip8.png",
+      "pricing": {
+        "storages": [
+          {
+            "label": "256GB",
+            "releasePrice": 1499300
+          },
+          {
+            "label": "512GB",
+            "releasePrice": 1629300
+          }
+        ],
+        "colors": [
+          {
+            "name": "핑크",
+            "hex": "#f4b6c7"
+          },
+          {
+            "name": "그라파이트",
+            "hex": "#3a3a3c"
+          },
+          {
+            "name": "크림",
+            "hex": "#efe7d6"
+          },
+          {
+            "name": "민트",
+            "hex": "#bfe3d0"
+          }
+        ],
+        "support": {
+          "SKT": {
+            "official": 500000,
+            "extra": 600000
+          },
+          "KT": {
+            "official": 500000,
+            "extra": 600000
+          },
+          "LGU+": {
+            "official": 450000,
+            "extra": 660000
+          }
+        }
+      }
     },
     {
       "id": "iphone17",
@@ -150,7 +458,55 @@
         "official": 350000,
         "extra": 350000
       },
-      "image": "/images/products/iphone-17.png"
+      "image": "/images/products/iphone-17.png",
+      "pricing": {
+        "storages": [
+          {
+            "label": "256GB",
+            "releasePrice": 1290000
+          },
+          {
+            "label": "512GB",
+            "releasePrice": 1420000
+          }
+        ],
+        "colors": [
+          {
+            "name": "미스트 블루",
+            "hex": "#a9c4dd"
+          },
+          {
+            "name": "라벤더",
+            "hex": "#c9bfe3"
+          },
+          {
+            "name": "세이지",
+            "hex": "#a8b8a0"
+          },
+          {
+            "name": "화이트",
+            "hex": "#f2f2f0"
+          },
+          {
+            "name": "블랙",
+            "hex": "#1f1f21"
+          }
+        ],
+        "support": {
+          "SKT": {
+            "official": 350000,
+            "extra": 350000
+          },
+          "KT": {
+            "official": 330000,
+            "extra": 370000
+          },
+          "LGU+": {
+            "official": 320000,
+            "extra": 390000
+          }
+        }
+      }
     },
     {
       "id": "iphone-air",
@@ -168,7 +524,51 @@
         "official": 300000,
         "extra": 300000
       },
-      "image": "/images/products/iphone-air.png"
+      "image": "/images/products/iphone-air.png",
+      "pricing": {
+        "storages": [
+          {
+            "label": "256GB",
+            "releasePrice": 1590000
+          },
+          {
+            "label": "512GB",
+            "releasePrice": 1720000
+          }
+        ],
+        "colors": [
+          {
+            "name": "스카이 블루",
+            "hex": "#bcd6ea"
+          },
+          {
+            "name": "클라우드 화이트",
+            "hex": "#efeeea"
+          },
+          {
+            "name": "라이트 골드",
+            "hex": "#e9dcc4"
+          },
+          {
+            "name": "스페이스 블랙",
+            "hex": "#2b2b2d"
+          }
+        ],
+        "support": {
+          "SKT": {
+            "official": 300000,
+            "extra": 300000
+          },
+          "KT": {
+            "official": 300000,
+            "extra": 300000
+          },
+          "LGU+": {
+            "official": 270000,
+            "extra": 330000
+          }
+        }
+      }
     },
     {
       "id": "iphone18-pro",
@@ -187,7 +587,55 @@
         "extra": 550000,
         "selectContract": 660000
       },
-      "image": "/images/products/iphone-18-pro.png"
+      "image": "/images/products/iphone-18-pro.png",
+      "pricing": {
+        "storages": [
+          {
+            "label": "256GB",
+            "releasePrice": 1690000
+          },
+          {
+            "label": "512GB",
+            "releasePrice": 1820000
+          },
+          {
+            "label": "1TB",
+            "releasePrice": 2080000
+          }
+        ],
+        "colors": [
+          {
+            "name": "버건디",
+            "hex": "#5a1f2a"
+          },
+          {
+            "name": "글레이셔",
+            "hex": "#d9e4ea"
+          },
+          {
+            "name": "실버",
+            "hex": "#d4d4d6"
+          },
+          {
+            "name": "블랙",
+            "hex": "#1f1f21"
+          }
+        ],
+        "support": {
+          "SKT": {
+            "official": 400000,
+            "extra": 550000
+          },
+          "KT": {
+            "official": 380000,
+            "extra": 580000
+          },
+          "LGU+": {
+            "official": 400000,
+            "extra": 550000
+          }
+        }
+      }
     },
     {
       "id": "iphone17e",
@@ -205,7 +653,47 @@
         "official": 400000,
         "extra": 400000
       },
-      "image": "/images/products/iphone-17e.png"
+      "image": "/images/products/iphone-17e.png",
+      "pricing": {
+        "storages": [
+          {
+            "label": "128GB",
+            "releasePrice": 990000
+          },
+          {
+            "label": "256GB",
+            "releasePrice": 1120000
+          }
+        ],
+        "colors": [
+          {
+            "name": "소프트 핑크",
+            "hex": "#f3c9d3"
+          },
+          {
+            "name": "화이트",
+            "hex": "#f2f2f0"
+          },
+          {
+            "name": "블랙",
+            "hex": "#1f1f21"
+          }
+        ],
+        "support": {
+          "SKT": {
+            "official": 400000,
+            "extra": 400000
+          },
+          "KT": {
+            "official": 380000,
+            "extra": 420000
+          },
+          "LGU+": {
+            "official": 360000,
+            "extra": 440000
+          }
+        }
+      }
     }
   ]
 }
