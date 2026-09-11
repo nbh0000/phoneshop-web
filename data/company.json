@@ -1,0 +1,14 @@
+{
+  "_comment": "회사 정보 placeholder. 실제 클라이언트 정보 확정 후 교체. 환경변수(NEXT_PUBLIC_COMPANY_*)가 있으면 그 값이 우선합니다. brandEn 은 헤더 워드마크(영문 로고)에 사용.",
+  "brandName": "폰다이렉트",
+  "companyName": "(주)폰다이렉트",
+  "ceo": "홍길동",
+  "businessNumber": "000-00-00000",
+  "address": "서울특별시 강남구 테헤란로 000, 0층",
+  "mailOrderNumber": "제 2026-서울강남-0000 호",
+  "privacyOfficer": "홍길동",
+  "email": "contact@example.com",
+  "phone": "1588-0000",
+  "hours": "평일 10:00 ~ 19:00 (주말·공휴일 휴무)",
+  "brandEn": "PHONE DIRECT"
+}

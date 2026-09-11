@@ -1,0 +1,211 @@
+{
+  "_comment": "상품 데이터. 코드 수정 없이 이 파일만 바꾸면 사이트가 갱신됩니다. price 단위는 원(KRW). category: galaxy | iphone. carrier: SKT | KT | LGU+. joinType: 번호이동 | 기기변경 | 신규가입. discountType: 공시지원 | 선택약정 image: public/images/products/ 경로 (삼성/애플 공식 사이트 제품 이미지).",
+  "preorder": {
+    "deadline": "2026-09-30T23:59:59+09:00",
+    "title": "사전예약 오픈",
+    "subtitle": "예약 접수 고객 한정 추가 혜택 적용",
+    "items": [
+      {
+        "id": "pre-iphone18-pro",
+        "name": "아이폰 18 Pro",
+        "storage": "256GB",
+        "badge": "사전예약",
+        "category": "iphone",
+        "releasePrice": 1690000,
+        "salePrice": 990000,
+        "carrier": "KT",
+        "joinType": "번호이동",
+        "discountType": "공시지원",
+        "plan": "5G 프리미엄 (월 9만원대)",
+        "benefits": [
+          "케이스 + 강화유리 증정",
+          "예약 고객 우선 출고"
+        ],
+        "image": "/images/products/iphone-18-pro.png"
+      },
+      {
+        "id": "pre-fold8",
+        "name": "갤럭시 Z 폴드8",
+        "storage": "256GB",
+        "badge": "사전예약",
+        "category": "galaxy",
+        "releasePrice": 2398000,
+        "salePrice": 1490000,
+        "carrier": "SKT",
+        "joinType": "번호이동",
+        "discountType": "공시지원",
+        "plan": "5G 프리미엄 (월 10만원대)",
+        "benefits": [
+          "S펜 케이스 증정",
+          "예약 고객 우선 출고"
+        ],
+        "image": "/images/products/fold8.png"
+      }
+    ]
+  },
+  "products": [
+    {
+      "id": "s26-ultra",
+      "name": "갤럭시 S26 울트라",
+      "storage": "256GB",
+      "category": "galaxy",
+      "badge": "오늘특가",
+      "releasePrice": 1698400,
+      "salePrice": 598400,
+      "carrier": "SKT",
+      "joinType": "번호이동",
+      "discountType": "공시지원",
+      "plan": "5G 프리미엄 (월 10만원대)",
+      "discounts": {
+        "official": 500000,
+        "extra": 600000
+      },
+      "image": "/images/products/s26-ultra.png"
+    },
+    {
+      "id": "s26-plus",
+      "name": "갤럭시 S26+",
+      "storage": "256GB",
+      "category": "galaxy",
+      "badge": "재고소량",
+      "releasePrice": 1353000,
+      "salePrice": 353000,
+      "carrier": "KT",
+      "joinType": "번호이동",
+      "discountType": "공시지원",
+      "plan": "5G 스탠다드 (월 9만원대)",
+      "discounts": {
+        "official": 450000,
+        "extra": 550000
+      },
+      "image": "/images/products/s26-plus.png"
+    },
+    {
+      "id": "s26",
+      "name": "갤럭시 S26",
+      "storage": "256GB",
+      "category": "galaxy",
+      "badge": "",
+      "releasePrice": 1155000,
+      "salePrice": 155000,
+      "carrier": "LGU+",
+      "joinType": "기기변경",
+      "discountType": "공시지원",
+      "plan": "5G 스탠다드 (월 8만원대)",
+      "discounts": {
+        "official": 400000,
+        "extra": 600000
+      },
+      "image": "/images/products/s26.png"
+    },
+    {
+      "id": "fold8-ultra",
+      "name": "갤럭시 Z 폴드8 울트라",
+      "storage": "256GB",
+      "category": "galaxy",
+      "badge": "",
+      "image": "/images/products/fold8-ultra.png",
+      "releasePrice": 2577300,
+      "salePrice": 1677300,
+      "carrier": "KT",
+      "joinType": "번호이동",
+      "discountType": "공시지원",
+      "plan": "5G 프리미엄 (월 11만원대)",
+      "discounts": {
+        "official": 500000,
+        "extra": 400000
+      }
+    },
+    {
+      "id": "flip8",
+      "name": "갤럭시 Z 플립8",
+      "storage": "256GB",
+      "category": "galaxy",
+      "badge": "오늘특가",
+      "releasePrice": 1499300,
+      "salePrice": 399300,
+      "carrier": "KT",
+      "joinType": "번호이동",
+      "discountType": "공시지원",
+      "plan": "5G 스탠다드 (월 9만원대)",
+      "discounts": {
+        "official": 500000,
+        "extra": 600000
+      },
+      "image": "/images/products/flip8.png"
+    },
+    {
+      "id": "iphone17",
+      "name": "아이폰 17",
+      "storage": "256GB",
+      "category": "iphone",
+      "badge": "오늘특가",
+      "releasePrice": 1290000,
+      "salePrice": 590000,
+      "carrier": "SKT",
+      "joinType": "번호이동",
+      "discountType": "공시지원",
+      "plan": "5G 프리미엄 (월 10만원대)",
+      "discounts": {
+        "official": 350000,
+        "extra": 350000
+      },
+      "image": "/images/products/iphone-17.png"
+    },
+    {
+      "id": "iphone-air",
+      "name": "아이폰 Air",
+      "storage": "256GB",
+      "category": "iphone",
+      "badge": "재고소량",
+      "releasePrice": 1590000,
+      "salePrice": 890000,
+      "carrier": "KT",
+      "joinType": "번호이동",
+      "discountType": "공시지원",
+      "plan": "5G 프리미엄 (월 10만원대)",
+      "discounts": {
+        "official": 300000,
+        "extra": 300000
+      },
+      "image": "/images/products/iphone-air.png"
+    },
+    {
+      "id": "iphone18-pro",
+      "name": "아이폰 18 Pro",
+      "storage": "256GB",
+      "category": "iphone",
+      "badge": "",
+      "releasePrice": 1690000,
+      "salePrice": 1090000,
+      "carrier": "LGU+",
+      "joinType": "번호이동",
+      "discountType": "선택약정",
+      "plan": "5G 프리미엄 (월 10만원대)",
+      "discounts": {
+        "official": 0,
+        "extra": 550000,
+        "selectContract": 660000
+      },
+      "image": "/images/products/iphone-18-pro.png"
+    },
+    {
+      "id": "iphone17e",
+      "name": "아이폰 17e",
+      "storage": "128GB",
+      "category": "iphone",
+      "badge": "",
+      "releasePrice": 990000,
+      "salePrice": 190000,
+      "carrier": "SKT",
+      "joinType": "기기변경",
+      "discountType": "공시지원",
+      "plan": "5G 스탠다드 (월 8만원대)",
+      "discounts": {
+        "official": 400000,
+        "extra": 400000
+      },
+      "image": "/images/products/iphone-17e.png"
+    }
+  ]
+}

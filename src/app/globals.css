@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+/* ── 디자인 토큰: 화이트/그레이 배경 + 레드 포인트 ─────────────────── */
+@theme {
+  --color-bg: #f4f5f8;        /* 페이지 배경 (연회색) */
+  --color-bg-2: #ffffff;      /* 카드/서피스 */
+  --color-bg-3: #eceef3;      /* 보조 서피스 */
+  --color-line: #e2e5eb;
+  --color-line-2: #cfd4dd;
+  --color-fg: #111827;
+  --color-fg-2: #4b5563;
+  --color-fg-3: #8b93a5;
+  --color-accent: #ff2d55;        /* 포인트 (가격/CTA) */
+  --color-accent-hover: #e6193f;
+  --color-accent-2: #2563eb;      /* 보조 포인트 (할인액) */
+  --color-danger: #e11d48;
+  --color-kakao: #fee500;
+  --color-kakao-fg: #191919;
+
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+
+  --shadow-glow: 0 0 0 1px rgb(255 45 85 / 0.25), 0 12px 32px -12px rgb(255 45 85 / 0.45);
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-fade-up: fade-up 0.5s ease-out both;
+  --animate-pulse-ring: pulse-ring 1.8s ease-out infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(-6deg); }
+    50% { transform: translateY(-14px) rotate(-6deg); }
+  }
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes pulse-ring {
+    0% { transform: scale(0.8); opacity: 0.8; }
+    100% { transform: scale(1.8); opacity: 0; }
+  }
+}
+
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  letter-spacing: -0.01em;
+  overflow-x: hidden;
+}
+
+/* 숫자 가독성 */
+.tabular { font-variant-numeric: tabular-nums; }
+
+/* 스크롤바 숨김 (가로 캐러셀) */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* 섹션 컨테이너 */
+.container-x {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+@media (min-width: 640px) { .container-x { padding-inline: 1.5rem; } }
+
+/* 취소선 출고가 */
+.strike { text-decoration: line-through; text-decoration-color: var(--color-fg-3); }
+
+/* 접근성: 포커스 링 */
+:focus-visible { outline: 2px solid var(--color-lime); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
+}

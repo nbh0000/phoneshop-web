@@ -1,0 +1,54 @@
+{
+  "_comment": "메인 배너 슬라이드. images 는 public/ 기준 경로 (최대 3장, 좌측에 겹쳐 표시). benefits 는 4개 권장. ctaPreset 은 조회하기 퍼널에 미리 담을 상품 정보.",
+  "intervalMs": 6000,
+  "slides": [
+    {
+      "id": "iphone18-preorder",
+      "tag": "전국 최대 70만원 할인",
+      "title": "아이폰 18 사전예약 특가",
+      "subtitle": "자급제보다 싸게, 통신사 지원금에 추가지원금까지",
+      "images": ["/images/products/iphone-18-pro.png", "/images/products/iphone-air.png", "/images/products/iphone-17.png"],
+      "accent": "#ff2d55",
+      "benefits": [
+        { "label": "혜택 1", "title": "사전예약", "desc": "빠른 재고 매칭" },
+        { "label": "혜택 2", "title": "70만원", "desc": "최대 할인 보장" },
+        { "label": "혜택 3", "title": "보상제도", "desc": "출고 지연 시 보상" },
+        { "label": "혜택 4", "title": "페이백", "desc": "추가 이벤트 진행" }
+      ],
+      "ctaLabel": "사전예약 조건 조회하기",
+      "ctaPreset": { "productId": "pre-iphone18-pro", "model": "아이폰 18 Pro 256GB", "carrier": "KT" }
+    },
+    {
+      "id": "fold8-preorder",
+      "tag": "출고가 대비 90만원 할인",
+      "title": "갤럭시 Z 폴드8 사전예약",
+      "subtitle": "폴드8 · 폴드8 울트라 · 플립8 예약 고객 우선 출고",
+      "images": ["/images/products/fold8.png", "/images/products/fold8-ultra.png", "/images/products/flip8.png"],
+      "accent": "#2563eb",
+      "benefits": [
+        { "label": "혜택 1", "title": "우선 출고", "desc": "예약 고객 한정" },
+        { "label": "혜택 2", "title": "케이스 증정", "desc": "S펜 케이스 포함" },
+        { "label": "혜택 3", "title": "90만원", "desc": "최대 할인 보장" },
+        { "label": "혜택 4", "title": "당일 발송", "desc": "개통 후 즉시" }
+      ],
+      "ctaLabel": "폴드8 조건 조회하기",
+      "ctaPreset": { "productId": "pre-fold8", "model": "갤럭시 Z 폴드8 256GB", "carrier": "SKT" }
+    },
+    {
+      "id": "s26-today",
+      "tag": "오늘 접수분 한정",
+      "title": "갤럭시 S26 시리즈 오늘특가",
+      "subtitle": "S26 울트라 59만원대, 번호이동 시 추가지원금 60만원",
+      "images": ["/images/products/s26-ultra.png", "/images/products/s26-plus.png", "/images/products/s26.png"],
+      "accent": "#ff2d55",
+      "benefits": [
+        { "label": "혜택 1", "title": "110만원", "desc": "총 할인금액" },
+        { "label": "혜택 2", "title": "공시지원", "desc": "번호이동 기준" },
+        { "label": "혜택 3", "title": "재고 확보", "desc": "전 컬러 보유" },
+        { "label": "혜택 4", "title": "1분 조회", "desc": "카카오 간편인증" }
+      ],
+      "ctaLabel": "S26 조건 조회하기",
+      "ctaPreset": { "productId": "s26-ultra", "model": "갤럭시 S26 울트라 256GB", "carrier": "SKT" }
+    }
+  ]
+}
