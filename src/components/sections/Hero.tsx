@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import type { BannerSlide } from "@/types";
 import { useFunnel } from "../FunnelContext";
 import { Button, cn } from "../ui/Button";
@@ -79,7 +80,7 @@ export function Hero({ slides, intervalMs = 6000 }: { slides: BannerSlide[]; int
                 {s.images.slice(0, 3).map((src, k) => (
                   <Image
                     key={src}
-                    src={src}
+                    src={asset(src)}
                     alt=""
                     width={320}
                     height={320}

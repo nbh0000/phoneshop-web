@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, type FormEvent } from "react";
 import Link from "next/link";
 import type { FunnelPreset } from "@/types";
 import { formatPhone } from "@/lib/format";
+import { IS_STATIC_DEMO } from "@/lib/asset";
 import { Button, ButtonLink, cn } from "../ui/Button";
 import { IconCheck, IconClose, IconKakao } from "../ui/Icons";
 
@@ -56,6 +57,14 @@ export function FunnelModal({ preset, onClose }: { preset: FunnelPreset; onClose
         setAuthState("expired");
         return;
       }
+      if (IS_STATIC_DEMO) {
+        if (Date.now() - started >= 5000) {
+          setStep(3);
+          return;
+        }
+        if (!stopped) setTimeout(tick, POLL_MS);
+        return;
+      }
       try {
         const r = await fetch(`/api/auth/status?txId=${encodeURIComponent(session.txId)}&inquiryId=${encodeURIComponent(session.inquiryId)}`, {
           cache: "no-store",
@@ -91,6 +100,14 @@ export function FunnelModal({ preset, onClose }: { preset: FunnelPreset; onClose
     if (!form.carrier) return setError("현재 사용 중인 통신사를 선택해 주세요.");
 
     setLoading(true);
+    if (IS_STATIC_DEMO) {
+      // GitHub Pages 정적 데모: 서버 없이 클라이언트에서 인증 흐름만 시연
+      setSession({ inquiryId: "demo", txId: `demo_${Date.now()}`, provider: "mock" });
+      setAuthState("pending");
+      setStep(2);
+      setLoading(false);
+      return;
+    }
     try {
       const r = await fetch("/api/inquiry", {
         method: "POST",

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import type { ProductsData } from "@/types";
 import { won } from "@/lib/format";
 import { useFunnel } from "../FunnelContext";
@@ -44,7 +45,7 @@ export function Preorder({ data }: { data: ProductsData["preorder"] }) {
                   </div>
                   {p.image && (
                     <Image
-                      src={p.image}
+                      src={asset(p.image)}
                       alt={`${p.name} 제품 이미지`}
                       width={176}
                       height={176}

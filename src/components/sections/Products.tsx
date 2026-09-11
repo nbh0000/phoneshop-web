@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import type { Category, Product } from "@/types";
 import { won } from "@/lib/format";
 import { useFunnel } from "../FunnelContext";
@@ -40,7 +41,7 @@ function ProductCard({ p, onClick }: { p: Product; onClick: () => void }) {
       {p.image && (
         <div className="relative mb-4 flex h-40 items-center justify-center rounded-xl bg-[radial-gradient(60%_60%_at_50%_50%,rgba(255,45,85,0.12),transparent_70%)]">
           <Image
-            src={p.image}
+            src={asset(p.image)}
             alt={`${p.name} 제품 이미지`}
             width={180}
             height={180}

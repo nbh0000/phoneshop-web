@@ -1,3 +1,4 @@
+export const dynamic = "force-static";
 import { ImageResponse } from "next/og";
 import { getCompany } from "@/lib/data";
 
